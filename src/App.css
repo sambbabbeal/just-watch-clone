@@ -24,9 +24,21 @@
 }
 
 .website {
-  background-color:aliceblue
+  background-color:#F3FEFF;
+  height:calc(100vh - 7.6rem)
 }
 
 .header-content {
-background-color:green
+background-color:#111;
+height:7rem
 }
+
+.principale-content {
+  height:  100%;
+  background-color:#F3FEFF;
+}
+
+p {
+  height: calc(100%  - 7rem)
+}
+
