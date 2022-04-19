@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import logo from "./assets/JustWatchLogo.png"
-import { Button } from './Button';
 import './header.css';
 
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
