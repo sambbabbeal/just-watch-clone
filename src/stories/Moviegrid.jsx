@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import "./moviegrid.css"
 export function MovieGrid(props) {
-    return (<div>
+    return (<div className="moviegrid">
         {props.listMovie.map(e => {
             return (<div>{e}</div>)
         })}
