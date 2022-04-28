@@ -18,25 +18,11 @@ class App extends Component {
     axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=ae7c30248f874b6ff1052082be68d6c7`)
       .then(res => {
         const movies = res.data.results;
-        console.log(movies, this.state)
-        //  this.setState(state => {
 
-        //     ({ ...state, listMovie: movies })
-
-        //  }, (state2) => {
-        //     console.log(state2, "ok")
-        //   })
 
         this.setState({ listMovie: [] }, () => this.setState({ listMovie: movies }))
-
-
-
-        console.log("ok", ctx.listMovie, this.state, this.listMovie)
-
-        //this.setState({ persons });
       })
-    // this.listMovie = ctx.listMovie
-    console.log(this.listMovie)
+
   }
   render() {
     console.log('in render' + this.state.listMovie)
