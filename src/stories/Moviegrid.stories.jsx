@@ -22,26 +22,11 @@ const TemplateCardMovie = (args) => {
 const TemplateMovieGridTitle = (args) => { return <MovieGrid listMovie={["THE  MASK", "RETURN FROM FUTURE", "STAR WARS"]} /> };
 const TemplateMovieGridCard = (args) => { return <MovieGrid listMovie={[<Card componentContained={<FakeCompo />} title="hello" />, <Card componentContained={<FakeCompo2 />} title="BYE" />]} /> };
 const TemplateMovieGridMovie = (args) => {
-    return <MovieGrid listMovie={[<Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />, <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="BYE" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />, <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />, <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />, <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />,
-    ]} />
+    let nb = 10;
+    return <MovieGrid listMovie={
+        [...Array(nb)].map(() => <Card componentContained={<FakeCompo3 imgUrl="https://www.filmspourenfants.net/wp-content/uploads/2018/07/retour-vers-le-futur-a-371x500.jpg" />} title="hello" />)
+
+    } />
 };
 
 const FakeCompo = () => {
