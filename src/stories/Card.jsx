@@ -2,19 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export const Card = (props) => {
-  console.log(props)
-  const Componentin = props.componentContained
-
   return (
     <div className="ContainerCard">
       <div className="cardTitle">{props.title}</div>
-      <div className="componentInCardContainer">{props.componentContained}</div>
+      <div className="componentInCardContainer">{props.children}</div>
     </div>
   )
 }
 
-
-Card.propTypes = {
-    componentContained: PropTypes.node.isRequired,
-    title: PropTypes.string.isRequired
-}
+Card.propTypes = { title: PropTypes.string.isRequired }
