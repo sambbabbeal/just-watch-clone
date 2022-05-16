@@ -1,7 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 You can try it on https://sambbabbeal.github.io/just-watch-clone/
-
+Here's the figma link to be invit: https://www.figma.com/team_invite/redeem/1Gw6S5z65lXKzHw2guelR5
+Here's the trello : https://trello.com/b/76ZdG88X/kanban
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
