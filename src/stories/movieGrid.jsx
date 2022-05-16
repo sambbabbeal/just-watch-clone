@@ -1,19 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 /**
  * Primary UI component for user interaction
  */
 export const MovieGrid = ({ size, ...props }) => {
-    return (
-        <div>movieGrid {size}</div>
-    )
-};
+  // we can init this movieGrid by children props or by listMovie props...
+  // might change in futur redondance... not DRY (TODO)
+  return (
+    <div className="moviegrid">
+      {!props.children
+        ? props.listMovie.map((e) => <div>{e}</div>)
+        : props.children}
+    </div>
+  )
+}
 
 MovieGrid.propTypes = {
-    size: PropTypes.string,
-};
-
-MovieGrid.defaultProps = {
-    size: "100",
-};
+  moviesList: PropTypes.arrayOf(PropTypes.node).isRequired
+}
