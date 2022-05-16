@@ -27,6 +27,7 @@
     "@storybook/node-logger": "^6.4.21",
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/testing-library": "0.0.9",
+    "eslint-config-prettier": "^8.5.0",
     "node-sass": "^7.0.1",
     "webpack": "^5.72.0"
   },

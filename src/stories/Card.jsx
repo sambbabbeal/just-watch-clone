@@ -13,7 +13,8 @@ export const Card = (props) => {
   )
 }
 
+
 Card.propTypes = {
-  componentContained: PropTypes.node,
-  title: PropTypes.string
+    componentContained: PropTypes.node.isRequired,
+    title: PropTypes.string.isRequired
 }
