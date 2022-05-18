@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import './App.css'
 import { MovieGrid } from './stories/Moviegrid'
@@ -6,6 +7,7 @@ import { Card } from './stories/Card'
 import Layout from './Layout'
 import { Header } from './stories/Header'
 import movieDBServices from './services/movieDBServices'
+
 const App = () => {
   const [listMovie, setListMovie] = useState([])
 
@@ -34,9 +36,16 @@ const App = () => {
   )
 
   return (
-    <div className="App">
-      <CompoLayout />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/about" element={<div>about</div>} />
+
+          <Route path="/users" element={<div>users</div>} />
+          <Route path="/" element={<CompoLayout />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
