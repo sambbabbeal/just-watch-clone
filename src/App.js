@@ -16,9 +16,7 @@ const App = () => {
       setListMovie(res.data.results)
     })
   }, [])
-
-  const CompoLayout = Layout(
-    <Header />,
+  const movieGridElement = (
     <MovieGrid>
       {listMovie?.map((resp, index) => {
         return (
@@ -34,15 +32,19 @@ const App = () => {
       })}
     </MovieGrid>
   )
+  //    2nd layout element arg is replace by outlet  component
+  const CompoLayout = Layout(<Header />)
 
   return (
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/about" element={<div>about</div>} />
-
-          <Route path="/users" element={<div>users</div>} />
-          <Route path="/" element={<CompoLayout />} />
+          <Route path="/about" element={<div>about no header</div>} />
+          <Route path="/users" element={<div>users no header</div>} />
+          <Route path="/" element={<CompoLayout />}>
+            <Route path="/" element={movieGridElement} />
+            <Route path="/:id" element={<div>TEST PAGE ID</div>} />
+          </Route>
         </Routes>
       </div>
     </Router>

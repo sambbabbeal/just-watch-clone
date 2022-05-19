@@ -1,11 +1,14 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
 
 const Layout = (ComponentHeader, ComponentContent) => {
   return () => {
     return (
       <div className="website">
         <div className="header-content">{ComponentHeader}</div>
-        <div className="principale-content">{ComponentContent}</div>
+        <Link to="/1">pageid</Link>
+        <div></div>
+        <Link to="/"> accueil</Link>
+
         <Outlet></Outlet>
       </div>
     )
